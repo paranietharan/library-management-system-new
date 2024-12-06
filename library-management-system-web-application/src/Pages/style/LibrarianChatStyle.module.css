@@ -1,0 +1,16 @@
+.AdminChatPage{
+    min-height: 70vh;
+    background: url('../../resources/17000.jpg');
+    overflow: hidden;
+}
+
+.AdminChatContainer{
+    margin-top: 5vh;
+    margin-left: 15vw;
+    min-height: 70vh;
+    width: 1000px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+}

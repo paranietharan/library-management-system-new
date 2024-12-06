@@ -1,0 +1,20 @@
+.content{
+    margin-left: 5vw;
+    padding: 10px;
+}
+
+.search{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* width: 70%; */
+}
+
+.searchResults{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 40vw;
+    margin-left: 5vw;
+    min-height: 70vh;
+    max-height: 80vh;
+    overflow-y: auto;
+}

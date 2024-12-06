@@ -1,0 +1,43 @@
+.fineManagementContainer {
+    max-width: 800px;
+    margin: 10vh auto;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.fineManagementHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.fineAmountDetails {
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.fineAmountDetailsTable {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.fineAmountDetailsTable th,
+.fineAmountDetailsTable td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word;
+}
+
+.fineAmountDetailsTable th {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.noFineMessage {
+    text-align: center;
+    padding: 2rem 0;
+}
