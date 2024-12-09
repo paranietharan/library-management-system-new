@@ -69,19 +69,6 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/logout" element={<LogoutUser />} />
-          
-          {/* Paranietharan */}
-          <Route path="/about" element={<ProtectedRoute roles={['MEMBER']}><AboutPage /></ProtectedRoute>} />
-          <Route path="/article-home" element={<ProtectedRoute roles={['MEMBER']}><ArticleHome /></ProtectedRoute>} />
-          <Route path="/article/:articleId" element={<ProtectedRoute roles={['MEMBER']}><ViewArticle /></ProtectedRoute>} />
-          <Route path='/my-profile' element={<ProtectedRoute roles={['MEMBER']}><MyProfile /></ProtectedRoute>} />
-          <Route path='/publish-articles' element={<ProtectedRoute roles={['MEMBER']}><PublishArticles /></ProtectedRoute>} />
-          <Route path='/article-edit/:articleId' element={<ProtectedRoute roles={['MEMBER']}><ArticleEdit /></ProtectedRoute>} />
-          <Route path='/article-search' element={<ProtectedRoute roles={['MEMBER']}><ArticleSearch /></ProtectedRoute>} />
-
-
-          {/*Shobikan */}
           <Route path="/login" element={<Login />} />
           <Route path='/details-fill' element={<DetailsFilling />} />
           <Route path='/details-confirmation' element={<DetailsConfirmation />} />
@@ -91,9 +78,16 @@ function App() {
           <Route path='/change-forgot-password' element={<ChangeForgotPassword />} />
           <Route path='/verifyMailForgotPassword' element={<VerifyForgotPassword />} />
           <Route path='/unauthorized' element={<UnauthorizedPage />} />
+          <Route path="/logout" element={<LogoutUser />} />
 
 
-          {/* Mihunan */}
+          <Route path="/about" element={<ProtectedRoute roles={['MEMBER']}><AboutPage /></ProtectedRoute>} />
+          <Route path="/article-home" element={<ProtectedRoute roles={['MEMBER']}><ArticleHome /></ProtectedRoute>} />
+          <Route path="/article/:articleId" element={<ProtectedRoute roles={['MEMBER']}><ViewArticle /></ProtectedRoute>} />
+          <Route path='/my-profile' element={<ProtectedRoute roles={['MEMBER']}><MyProfile /></ProtectedRoute>} />
+          <Route path='/publish-articles' element={<ProtectedRoute roles={['MEMBER']}><PublishArticles /></ProtectedRoute>} />
+          <Route path='/article-edit/:articleId' element={<ProtectedRoute roles={['MEMBER']}><ArticleEdit /></ProtectedRoute>} />
+          <Route path='/article-search' element={<ProtectedRoute roles={['MEMBER']}><ArticleSearch /></ProtectedRoute>} />
           <Route path="/" element={<ProtectedRoute roles={['MEMBER']}><UserHome /></ProtectedRoute>} />
           <Route path="/book/:id" element={<ProtectedRoute roles={['MEMBER']}><ViewBook /></ProtectedRoute>} />
           <Route path='/complaint' element={<ProtectedRoute roles={['MEMBER']}><Complaint /></ProtectedRoute>} />
@@ -101,10 +95,6 @@ function App() {
           <Route path='/user-chat' element={<ProtectedRoute roles={['MEMBER']}><UserChat /></ProtectedRoute>} />
           <Route path='/todo-list' element={<ProtectedRoute roles={['MEMBER']}><ToDoListPage /></ProtectedRoute>} />
           <Route path='/notes' element={<ProtectedRoute roles={['MEMBER']}><Notes /></ProtectedRoute>} />
-          {/* Librarian chat */}
-          <Route path='/librarian-chat' element={<ProtectedRoute roles={['LIBRARIAN']}><LibrarianChat /></ProtectedRoute>} />
-
-          {/* Yasothan */}
           <Route path="/message" element={<ProtectedRoute roles={['MEMBER']}><UserMessages /></ProtectedRoute>} />
           <Route path='/mybooks' element={<ProtectedRoute roles={['MEMBER']}><MyBooks /></ProtectedRoute>} />
           <Route path="/fine" element={<ProtectedRoute roles={['MEMBER']}><FineManagement /></ProtectedRoute>} />
@@ -115,9 +105,6 @@ function App() {
           <Route path='/edit-profile' element={<ProtectedRoute roles={['MEMBER']}><EditProfile /></ProtectedRoute>} />
           <Route path='/security' element={<ProtectedRoute roles={['MEMBER']}><SecurityPage /></ProtectedRoute>} />
 
-
-
-          {/* Lathisana */}
           <Route path="/admin" element={
             <ProtectedRoute roles={['LIBRARIAN']}>
               <AdminDashboardHome />
@@ -159,7 +146,7 @@ function App() {
               <AdminComplaintPage />
             </ProtectedRoute>
           } />
-
+          <Route path='/librarian-chat' element={<ProtectedRoute roles={['LIBRARIAN']}><LibrarianChat /></ProtectedRoute>} />
           <Route path='/admin-fine-management' element={
             <ProtectedRoute roles={['LIBRARIAN']}>
               <AdminFineManagement />
@@ -183,9 +170,6 @@ function App() {
               <AdminProfileManagement />
             </ProtectedRoute>
           } />
-
-          {/* Sample code for test */}
-          <Route path='/test' element={<Test />} />
         </Routes>
       </Router>
     </AuthProvider>
