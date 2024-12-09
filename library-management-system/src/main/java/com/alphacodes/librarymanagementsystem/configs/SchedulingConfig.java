@@ -8,8 +8,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 
 @Configuration
 @EnableScheduling
-public class SchedulingConfig {
-
+public class SchedulingConfig {// for update fines this run every midnight and update amounts in database
     @Autowired
     private FineService fineService;
 
